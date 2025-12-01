@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帝国センターレジデンス - 公式サイト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'serif';
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 700;
+        }
+        .text-accent { color: #8B734B; }
+        .border-accent { border-color: #8B734B; }
+        .bg-accent { background-color: #8B734B; }
+        .hover\:bg-accent-hover:hover { background-color: #7A6540; }
+        .modal-backdrop { background-color: rgba(0, 0, 0, 0.75); }
+
+        #main-header {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .section-title-wrapper {
+            display: flex;
+            align-items: flex-end;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .section-title {
+            display: inline-block;
+        }
+        .title-subtext {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .title-border {
+            border-bottom: 2px solid #8B734B;
+            width: fit-content;
+        }
+
+        @keyframes subtle-zoom-out {
+            0% {
+                transform: scale(1.25);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .hero-background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            
+            transform: scale(1.05);
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-name: none;
+        }
+        .hero-background-image.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <header id="main-header" class="bg-white shadow-md fixed top-0 left-0 right-0 z-10 opacity-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#top" class="flex flex-col items-start text-accent">
+                <span class="text-2xl font-bold tracking-widest leading-none">IMPERIAL RESIDENCE</span>
+                <span class="text-xs tracking-wider mt-1 text-gray-700">帝国センターレジデンス</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-6 text-base">
+                <a href="#concept" class="text-gray-600 hover:text-accent transition duration-150">コンセプト</a>
+                <a href="floorplans.html" class="text-gray-600 hover:text-accent transition duration-150">間取り</a>
+                <a href="#access" class="text-gray-600 hover:text-accent transition duration-150">アクセス</a>
+                <a href="#contact-cta" class="text-gray-600 hover:text-accent transition duration-150">お問い合わせ</a>
+            </nav>
+
+            <div class="w-8 h-8"></div>
+        </div>
+    </header>
+
+    <main class="pt-[64px]">
+
+        <section id="top" class="relative h-[85vh] p-4 sm:p-8 overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="hero-background-image active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('cr1.png');"></div>
+                <div class="hero-background-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('cr2.png');"></div>
+                <div class="hero-background-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('cr3.png');"></div>
+            </div>
+
+            <div class="absolute left-4 bottom-8 md:left-16 md:bottom-16 max-w-lg z-10 text-white">
+                <div class="text-lg md:text-xl font-medium tracking-wide border-l-4 border-accent pl-4 pt-1 mt-6">
+                    自然と未来が調和する、<br>新たなタワーレジデンス。
+                </div>
+            </div>
+        </section>
+
+        <section id="concept" class="py-16 md:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 title-border">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title text-4xl md:text-5xl font-bold text-accent">
+                            コンセプト
+                        </h2>
+                        <span class="title-subtext">CONCEPT</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 lg:order-2">
+                        
+                        <p class="text-gray-700 leading-loose text-lg">
+                            帝国センターレジデンスは、快適で便利な高級分譲マンションです。大きな窓からの素晴らしい眺望や、帝国内唯一のワープルーム直結という利便性の高さが特徴です。
+                        </p>
+                        <ul class="space-y-3 pt-4 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <div><strong class="text-gray-900">ワープルーム直結:</strong> 帝国内唯一の立地で、抜群の利便性。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <div><strong class="text-gray-900">充実した施設:</strong> ショップ併設（予定）で快適なサーバーライフを。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                                <div><strong class="text-gray-900">最新のデザイン:</strong> 帝国内初のボート式ドアを採用。</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl lg:order-1">
+                        <img src="le.png"
+                             alt="" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="floorplan" class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 title-border">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title text-4xl md:text-5xl font-bold text-accent">
+                            間取り
+                        </h2>
+                        <span class="title-subtext">FLOOR PLAN</span>
+                    </div>
+                </div>
+
+                <p class="text-lg mb-10 text-gray-700">
+                    多様なライフスタイルに応える、高級感あふれる住空間。全住戸が角部屋の設計です。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <img src="typea.png" alt="[Image of 1 bedroom floorplan]" class="w-full rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2 text-accent">Type A </h4>
+                        <p class="text-gray-600 text-sm">専有面積: 434m²</p>
+                        <p class="text-gray-700 mt-3">
+                            当レジデンスで最も贅沢なペントハウス仕様の分譲住宅です。開放感あふれるインテリアで、プライベートバルコニーが併設されています。〈3302号室〉
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <img src="typec.png" alt="[Image of 2 bedroom floorplan]" class="w-full rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2 text-accent">Type C</h4>
+                        <p class="text-gray-600 text-sm">専有面積: 434m²</p>
+                        <p class="text-gray-700 mt-3">
+                            31,32階の2階分を贅沢に使用した住宅です。面積はType Aと同じとなっており、南向きの迫力の眺望を全面のガラスから愉しむことができます。〈3102号室〉
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <img src="typel.png" alt="[Image of 3 bedroom floorplan]" class="w-full rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2 text-accent">Type L</h4>
+                        <p class="text-gray-600 text-sm">専有面積: 243m²</p>
+                        <p class="text-gray-700 mt-3">
+                            帝国センターレジデンス25階の、南東向き住宅です。リーズナブルな価格で快適な生活をお楽しみいただけます。
+                        </p>
+                    </div>
+
+                </div>
+                <div class="mt-12 text-left">
+                    <a href="floorplans.html" class="inline-block px-8 py-3 text-base font-semibold rounded-full border border-accent text-accent hover:bg-accent-hover hover:text-white transition duration-300">
+                        全間取りの詳細を見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="access" class="py-16 md:py-24 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-16 title-border">
+                    <div class="section-title-wrapper">
+                        <h2 class="section-title text-4xl md:text-5xl font-bold text-accent">
+                            アクセス
+                        </h2>
+                        <span class="title-subtext">ACCESS</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold">ビジネスと生活の中心地</h3>
+                        <p class="text-gray-700 leading-loose text-lg">
+                            帝国センターレジデンスは、新ワープルームと主要ターミナル駅に直結する最高のロケーションに位置しています。どこへ向かうにもスムーズな移動が可能です。
+                        </p>
+                        
+                        <div class="bg-gray-100 p-6 rounded-xl shadow-inner">
+                            <h4 class="text-xl font-bold mb-4 text-accent">周辺環境</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center"><i class="fas fa-train text-gray-500 mr-3"></i><strong class="mr-2">「鉄取駅」</strong> 徒歩10秒</li>
+                                <li class="flex items-center"><i class="fas fa-building text-gray-500 mr-3"></i><strong class="mr-2">SSG新ワープルーム</strong> 直結。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden shadow-2xl">
+                        <img src="mp.png"
+                             alt="[Image of Map Placeholder]" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-cta" class="py-16 md:py-24 bg-gray-900 text-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div class="mb-16 title-border inline-block">
+                    <div class="section-title-wrapper justify-center">
+                        <h2 class="section-title text-4xl md:text-5xl font-bold text-accent">
+                            お問い合わせ
+                        </h2>
+                        <span class="title-subtext">CONTACT</span>
+                    </div>
+                </div>
+
+                <p class="text-xl max-w-3xl mx-auto">
+                    お問い合わせは、Discord ID:SuitableIce2333<br>
+                    まで直接ご連絡ください。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500 space-y-2">
+            <p>&copy; 2025 Imperial Center Residence. All Rights Reserved.</p>
+            <p>本ページはMinecraft©のゲーム内レジデンスの紹介です。</p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('main-header');
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 100;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > scrollThreshold) {
+                if (currentScrollY > lastScrollY) {
+                    header.style.opacity = '0';
+                    header.style.pointerEvents = 'none';
+                } else {
+                    header.style.opacity = '1';
+                    header.style.pointerEvents = 'auto';
+                }
+            } else {
+                header.style.opacity = '1';
+                header.style.pointerEvents = 'auto';
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroImages = document.querySelectorAll('#top .hero-background-image');
+            let currentIndex = 0;
+
+            function rotateImages() {
+                heroImages[currentIndex].classList.remove('active');
+                
+                currentIndex = (currentIndex + 1) % heroImages.length;
+
+                heroImages[currentIndex].style.animationName = 'none';
+                heroImages[currentIndex].offsetHeight;
+                
+                heroImages[currentIndex].classList.add('active');
+                heroImages[currentIndex].style.animationName = 'subtle-zoom-out';
+            }
+
+            heroImages[currentIndex].style.animationName = 'subtle-zoom-out';
+
+            setInterval(rotateImages, 10000); 
+        });
+
+    </script>
+</body>
+</html>
